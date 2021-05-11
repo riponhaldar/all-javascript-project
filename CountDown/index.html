@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CountDown Timer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="child">
+        <h1>Countdown</h1>
+        <p>
+          select evrything (Date-month-year) than page refresh then <br />
+          submit
+        </p>
+        <div class="flex">
+          <select id="date">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27 ">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+          <select id="month">
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+          </select>
+          <input type="number" placeholder="yyyy" id="yyyy" />
+        </div>
+        <button type="button" class="btn" id="btn">Submit</button>
+
+        <table>
+          <tr class="tr">
+            <th>totalHrs</th>
+            <th>Days</th>
+            <th>Hrs</th>
+            <th>Min</th>
+            <th>sec</th>
+          </tr>
+          <tr>
+            <td id="totalhrs">0</td>
+            <td id="days">0</td>
+            <td id="hrs">0</td>
+            <td id="min">0</td>
+            <td id="sec">0</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      alert('select evrything Date-month-year  than page refresh then submit')
+
+      var monthyyyy = document.getElementById('yyyy')
+      var date = document.getElementById('date')
+      var month = document.getElementById('month')
+      var btn = document.getElementById('btn')
+      var year = monthyyyy.value
+      var dat = date.value
+      var mont = month.value
+      console.log(year)
+      btn.addEventListener('click', function (event) {
+        window.alert('if you not refresh the page than go and than submit')
+        function countDown() {
+          event.preventDefault()
+          var today = new Date()
+
+          var eventDate = new Date(`${mont} ${dat},${year} 00:00:00`)
+
+          var currentTime = today.getTime()
+          var eventTime = eventDate.getTime()
+          var remTime = eventTime - currentTime
+          // console.log(remTime)
+          var sec = Math.floor(remTime / 1000)
+          var min = Math.floor(sec / 60)
+          var hrs = Math.floor(min / 60)
+          var days = Math.floor(hrs / 24)
+
+          hrs = hrs % 24
+          min %= 60
+          sec %= 60
+          var totalhrs = Math.floor(days * 24 + hrs)
+          hrs = hrs < 10 ? '0' + hrs : hrs
+          min = min < 10 ? '0' + min : min
+          sec = sec < 10 ? '0' + sec : sec
+
+          document.getElementById('totalhrs').innerHTML = totalhrs
+          document.getElementById('days').innerHTML = days
+          document.getElementById('hrs').innerHTML = hrs
+          document.getElementById('min').innerHTML = min
+          document.getElementById('sec').innerHTML = sec
+
+          setTimeout(countDown, 1000)
+        }
+        countDown()
+      })
+    </script>
+  </body>
+</html>
