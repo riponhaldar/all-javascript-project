@@ -9,10 +9,13 @@
   </head>
   <body>
     <div class="container">
+      <div class="date">
+        <div id="txt">a</div>
+      </div>
       <div class="child">
         <h1>Countdown</h1>
         <p>
-          select evrything (Date-month-year) than page refresh then <br />
+          select evrything (Date-month-year)then <br />
           submit
         </p>
         <div class="flex">
@@ -66,6 +69,9 @@
           <input type="number" placeholder="yyyy" id="yyyy" />
         </div>
         <button type="button" class="btn" id="btn">Submit</button>
+        <a href="index.html">
+          <button type="button" class="btn">refresh</button></a
+        >
 
         <table>
           <tr class="tr">
@@ -86,52 +92,6 @@
       </div>
     </div>
 
-    <script>
-      alert('select evrything Date-month-year  than page refresh then submit')
-
-      var monthyyyy = document.getElementById('yyyy')
-      var date = document.getElementById('date')
-      var month = document.getElementById('month')
-      var btn = document.getElementById('btn')
-      var year = monthyyyy.value
-      var dat = date.value
-      var mont = month.value
-      console.log(year)
-      btn.addEventListener('click', function (event) {
-        window.alert('if you not refresh the page than go and than submit')
-        function countDown() {
-          event.preventDefault()
-          var today = new Date()
-
-          var eventDate = new Date(`${mont} ${dat},${year} 00:00:00`)
-
-          var currentTime = today.getTime()
-          var eventTime = eventDate.getTime()
-          var remTime = eventTime - currentTime
-          // console.log(remTime)
-          var sec = Math.floor(remTime / 1000)
-          var min = Math.floor(sec / 60)
-          var hrs = Math.floor(min / 60)
-          var days = Math.floor(hrs / 24)
-
-          hrs = hrs % 24
-          min %= 60
-          sec %= 60
-          var totalhrs = Math.floor(days * 24 + hrs)
-          hrs = hrs < 10 ? '0' + hrs : hrs
-          min = min < 10 ? '0' + min : min
-          sec = sec < 10 ? '0' + sec : sec
-
-          document.getElementById('totalhrs').innerHTML = totalhrs
-          document.getElementById('days').innerHTML = days
-          document.getElementById('hrs').innerHTML = hrs
-          document.getElementById('min').innerHTML = min
-          document.getElementById('sec').innerHTML = sec
-
-          setTimeout(countDown, 1000)
-        }
-        countDown()
-      })
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>
