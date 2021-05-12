@@ -31,6 +31,12 @@
   font-size: 1.2rem;
   color: rgb(131, 131, 131);
 }
+#oi {
+  color: red;
+}
+#ok {
+  color: blue;
+}
 table {
   border-collapse: collapse;
   width: 100%;
@@ -62,6 +68,7 @@ tr:nth-child(even) {
   display: flex;
   padding-top: 50px;
 }
+
 input {
   color: #000;
   font-weight: 700;

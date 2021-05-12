@@ -1,6 +1,4 @@
-// alert('select evrything Date-month-year then submit')
-
-var monthyyyy = document.getElementById('yyyy')
+var yyyy = document.getElementById('yyyy')
 var date = document.getElementById('date')
 var month = document.getElementById('month')
 var btn = document.getElementById('btn')
@@ -8,11 +6,15 @@ var btn = document.getElementById('btn')
 btn.addEventListener('click', function (event) {
   function countDown() {
     event.preventDefault()
-    var year = monthyyyy.value
+    var year = yyyy.value.trim()
     var dat = date.value
     var mont = month.value
     var today = new Date()
-
+    if (year === '') {
+      document.getElementById('oi').innerText = 'type year '
+    } else {
+      document.getElementById('ok').innerText = '200'
+    }
     var eventDate = new Date(`${mont} ${dat},${year} 00:00:00`)
 
     var currentTime = today.getTime()
