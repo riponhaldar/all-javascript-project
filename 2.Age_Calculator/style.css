@@ -16,13 +16,19 @@ h2 {
   justify-content: center;
   margin-top: 5rem;
 }
-
+#error {
+  padding-top: 20px;
+  font-size: 1rem;
+  color: red;
+  text-align: center;
+}
 .Calculat input {
   color: rgb(0, 0, 0);
   padding: 10px;
   cursor: pointer;
   margin: 20px;
 }
+
 .Calculat #btn {
   margin: 20px;
   background-color: rgb(255, 255, 255);

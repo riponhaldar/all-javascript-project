@@ -1,9 +1,50 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
-h2 {
+.container {
+  position: relative;
+  height: 100vh;
+}
+
+.child {
+  width: auto;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+.child h1 {
   text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2.5rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  .child h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
 }

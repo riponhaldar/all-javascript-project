@@ -1,6 +1,12 @@
 function age() {
-  var inputAge = document.getElementById('date_birth').value
+  var er = document.getElementById('error')
 
+  var inputAge = document.getElementById('date_birth').value
+  if (inputAge === '') {
+    er.innerText = '👇 nput date of birth'
+  } else {
+    er.innerText = '🔥nice'
+  }
   var ud = Date.parse(inputAge)
   var nd = Date.now()
 

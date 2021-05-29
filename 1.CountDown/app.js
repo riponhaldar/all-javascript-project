@@ -16,6 +16,7 @@ btn.addEventListener('click', function (event) {
       document.getElementById('ok').innerText = '200'
     }
     var eventDate = new Date(`${mont} ${dat},${year} 00:00:00`)
+    // var eventDate = new Date('may 1,2022 00:00:00')
 
     var currentTime = today.getTime()
     var eventTime = eventDate.getTime()
