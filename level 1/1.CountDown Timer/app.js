@@ -12,6 +12,9 @@ countDown = () => {
 
   countD.innerText = ` ${min}: ${sec}`
   time--
+  if (time < 0) {
+    clearInterval(x)
+  }
 }
 
-var id = setInterval(countDown, 1000)
+var x = setInterval(countDown, 1000)
