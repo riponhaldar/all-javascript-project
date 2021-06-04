@@ -6,6 +6,7 @@
 .container {
   position: relative;
   height: 100vh;
+  background-color: #000;
 }
 
 .child {
@@ -18,4 +19,13 @@
 }
 .child {
   text-align: center;
+}
+h2 {
+  color: #fff;
+  padding-bottom: 3rem;
+}
+p {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 800;
 }
