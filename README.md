@@ -2,8 +2,7 @@
 
  <h4> 30days javascript challange</h4>
 
-Day 1, #30DaysOfJavascript  
-<<<<<<< HEAD
+Day 1, #30DaysOfJavascript
 today learning #javascript <br>
 Datatypes in js<br>
 strings<br>
