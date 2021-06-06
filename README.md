@@ -130,10 +130,10 @@ today learning #javascript.....
 API...
 
 day 26, 27,28,29,30
-5day
+5day <br>
 some project and build <br>
-3 api project.... weather, covid..
-1.weather
-2.covid
-3.your choise
-take your time.. :)
+3 api project.... weather, covid.. <br>
+1.weather <br>
+2.covid <br>
+3.your choise <br>
+take your time.. :) 
