@@ -125,9 +125,9 @@ Day 24, #30DaysOfJavascript
 today learning #javascript.....
 async Function(async/await)
 
-Day 25, #30DaysOfJavascript  
-today learning #javascript.....
-API...
+Day 25, #30DaysOfJavascript
+<p> today learning #javascript.....</p>
+API...<br>
 
 day 26, 27,28,29,30
 5day <br>
