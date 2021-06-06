@@ -2,7 +2,6 @@ var yyyy = document.getElementById('yyyy')
 var date = document.getElementById('date')
 var month = document.getElementById('month')
 var btn = document.getElementById('btn')
-
 btn.addEventListener('click', function (event) {
   function countDown() {
     event.preventDefault()
@@ -10,6 +9,8 @@ btn.addEventListener('click', function (event) {
     var dat = date.value
     var mont = month.value
     var today = new Date()
+    console.log(year)
+
     if (year === '') {
       document.getElementById('oi').innerText = 'type year '
     } else {
@@ -43,6 +44,7 @@ btn.addEventListener('click', function (event) {
 
     setTimeout(countDown, 1000)
   }
+
   countDown()
 })
 //  Time
