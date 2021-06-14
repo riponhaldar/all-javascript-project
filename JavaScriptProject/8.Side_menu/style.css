@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* dark mode hehehe -_+ */
+body.dark {
+  background-color: black;
+}
+button {
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.8rem;
+  padding: 0rem 0.5rem 0.3rem;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  transition: transform 0.4s ease-in-out;
+}
+
+nav {
+  background-color: rgb(93, 93, 93);
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  padding: 2rem;
+  transform: translateX(100%);
+  transition: 0.3s ease-in;
+}
+nav.active {
+  transform: translateX(0);
+}
+button.active {
+  transform: translateX(-130px);
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  padding: 1rem 0;
+  font-size: 1.3rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: rgb(251, 255, 0);
+}
+nav ul li a:hover {
+  color: rgb(234, 0, 255);
+}

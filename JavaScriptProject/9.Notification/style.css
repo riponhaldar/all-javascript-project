@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto;
+}
+
+#btn {
+  background-color: black;
+  color: #fff;
+  border-radius: 5px;
+  border: 0;
+  font-weight: 800;
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: 4px 5px 4px rgb(0, 0, 0);
+  padding: 0.5rem 0.8rem;
+}
+.notification {
+  color: rgb(255, 255, 255);
+  font-size: 1.3rem;
+  background-color: #000;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem;
+}
