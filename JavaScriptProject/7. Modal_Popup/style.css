@@ -18,7 +18,6 @@ button {
   border: none;
   font-weight: 800;
   cursor: pointer;
-
   box-shadow: 4px 5px 4px rgb(0, 0, 0);
   padding: 0.5rem 0.8rem;
 }
@@ -28,17 +27,13 @@ button {
   top: 0;
   left: 0;
   height: 100vh;
-  opacity: 0;
   width: 100vw;
-  pointer-events: none;
   align-items: center;
-  display: flex;
+  display: none;
   justify-content: center;
-  /* display: none; */
 }
 .model_container.show {
-  opacity: 1;
-  pointer-events: all;
+  display: flex;
 }
 
 .modal {
